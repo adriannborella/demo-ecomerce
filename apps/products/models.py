@@ -14,6 +14,10 @@ class Category(models.Model):
     class Meta:
         managed = False
         db_table = 'category'
+        app_label='data'
+    
+    def __str__(self) -> str:
+        return f"{self.name}"
 
 
 class Product(models.Model):
@@ -26,3 +30,7 @@ class Product(models.Model):
     class Meta:
         managed = False
         db_table = 'product'
+        app_label='data'
+    
+    def __str__(self) -> str:
+        return f"{self.name}"
